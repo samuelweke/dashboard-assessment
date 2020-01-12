@@ -1,3 +1,6 @@
+This project was hosted on Firebase. Here is the link to the app https://transmonitor-dashboard.firebaseapp.com/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
