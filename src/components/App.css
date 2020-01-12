@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  background-color: #f7f8fa !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: #333;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+table, th{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+table thead{
+  background-color: #EAEEF0;
+}
+
+.nav .nav-text{
+  padding-top: 6px !important;
+}
+
+.col-md-10.dashboard{
+  padding: 33px 65px 65px 30px;
+}
+
+.card.graph-card{
+  border:1px solid #EEF8FD;
+}
+
+.graph-card .card-top{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  padding-top: 26px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.graph-card .card-top h2{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-top: 6px;
+}
+
+.btn-graph{
+  background-color: #ccc;
+}
+
+.progress{
+  background-color: #FDC203 !important;
+  height: 4px !important;
+}
+
+.progress-bar{
+  background-color: #27AE60 !important;
+}
+
+.card.progressCard{
+  border:1px solid #EEF8FD;
+  padding: 20px;
+  font-size: 14px;
+  color: #262626;
+}
+
+
+
+.card.progressCard h4{
+  font-size: 14px; 
+  color: #262626;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.progressCard p{
+  padding-top: 8px;
+}
+
+.progressCard .pending span{
+  color: #FDC203;
+  font-weight: 600;
+}
+
+.progressCard .reconcilled span{
+  color: #27AE60;
+  font-weight: 600;
+}
+
+.progressCard .total span{
+  color: #1860EC;
+  font-weight: 600;
+}
+
+.btn-light{
+  background-color: #f4f4f4  !important;
+  border: 1px solid #CED0DA !important;
+  font-size: 12px !important;
+  color: #abadb5 !important;
+  padding: 1px 10px 0px 10px !important;
+  width: 30px !important;
+  height: 22px !important;
+}
+
+.graph-select {
+  display: inline-block;
+  width: 100%;
+  height: 31px;
+  padding: .375rem 1.75rem .375rem .75rem;
+  font-size: 12px;
+  background: transparent;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+.btn-nav{
+  display: flex;
+  padding-top: 5px;
+}
+
+.show-payment{
+  font-size: 13px !important;
+  display: flex;
+}
+
+h2.payment{
+  font-size: 30px;
+}
+
+.show-payment p select{
+  display: inline-block;
+  padding: 0;
+  margin-right: 6px;
+  outline: 0;
+  margin-left: 6px;
+  font-size: 14px;
+  background: transparent;
+  color: #1875F0;
+  border: 0;
+  border-radius: .25rem;
+}
+
+.show-payment form{
+  display: flex;
+  flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 55px;
 }
 
-.App-link {
-  color: #61dafb;
+.show-payment .search{
+  display: block;
+  padding: 0px 5px 3px 16px;
+  font-size: 11px;
+  color: #495057;
+  background-color: inherit;
+  border: 0;
+  border-bottom: 1px solid #787878;
+  width: auto;
+}
+.show-payment .search:focus{
+  outline: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.show-payment div{
+  margin-left: 160px;
+}
+
+.show-payment div select{
+  display: inline-block;
+  padding: 3px 10px 3px 8px;
+  margin-right: 6px;
+  outline: 0;
+  margin-left: 20px;
+  font-size: 14px;
+  background: #f4f4f4;
+  color: #414042;
+  border: 1px solid #CED0DA;
+  border-radius: .25rem;
+}
+
+.show-payment div select option{
+  background-color: #fff;
+  border-left: 1px solid #CED0DA;
+}
+
+.thead{
+  background-color: #EAEEF0;
+  color: #7F8FA4;
+}
+
+.table th{
+  border: 0 !important;
+}
+
+.table tbody{
+  background-color: #fff !important;
+}
+
+.table tr:first-child td{
+  border-top: none !important;
+}
+button.Reconcilled{
+    display: inline-block;
+    background-color: inherit;
+    color: #27AE60;
+    border-radius: 30px;
+    padding: 6px 20px 6px 12px;
+    margin-left: 28px;
+    font-weight: 400;
+    border: 1px solid #CCCFD4;
+    font-size: 12px;
+    min-width: 127px;
+}
+
+.table button svg{
+  margin-bottom: 1px;
+  margin-right: 8px;
+}
+
+.Reconcilled circle{
+  fill: #27AE60;
+}
+
+button.Pending{
+  display: inline-block;
+  background-color: inherit;
+  color:  #EBC315;
+  border-radius: 30px;
+  padding: 6px 20px 6px 12px;
+  margin-left: 28px;
+  font-weight: 400;
+  border: 1px solid #CCCFD4;
+  font-size: 12px; 
+  min-width: 127px;
+}
+
+.Pending circle{
+  fill:  #EBC315;
+}
+
+button.Un-reconcilled{
+  display: inline-block;
+  background-color: inherit;
+  color:  #7F8FA4;
+  border-radius: 30px;
+  padding: 6px 20px 6px 12px;
+  margin-left: 28px;
+  font-weight: 400;
+  border: 1px solid #CCCFD4;
+  font-size: 12px;
+  min-width: 127px;
+}
+
+.Un-reconcilled circle{
+  fill:  #7F8FA4;
 }
