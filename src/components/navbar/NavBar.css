@@ -54,6 +54,6 @@ Nav.link{
     background-color: inherit !important;
     border-bottom: 1px solid #000 !important;
     outline: 0;
-    box-shadow: none !important;
     border-radius: 0;
+    box-shadow: none !important;
 }
